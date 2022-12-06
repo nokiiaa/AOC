@@ -1,2 +1,2 @@
 def day6(data):
-  return ((lambda n: next(i+n for i in range(len(data)-n) if len(set(data[i:i+n])) == n))(n) for n in (4, 14))
+  return ([i+n for i in range(len(data)-n) if len(set(data[i:i+n])) == n][0] for n in (4, 14))
