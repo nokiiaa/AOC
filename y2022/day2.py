@@ -2,7 +2,7 @@ import math
 
 def day2(data):
   score1, score2 = 0, 0
-  cmp = lambda a, b: ((int(math.copysign(1, a-b)) if abs(a-b) == 2 else b-a) + 1) * 3
+  cmp = lambda a, b: (((a-b)//2 if abs(a-b) == 2 else b-a) + 1) * 3
   for x in data.splitlines():
     X, Y = x.split()
     X = ord(X) - ord('A') + 1
