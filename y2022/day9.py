@@ -5,7 +5,7 @@ def day9(data):
   def simulate(n):
     positions = []
     table = {'L': (-1,0), 'R': (1,0), 'U': (0,1), 'D': (0,-1)}
-    knots = [(0, 0) for i in range(n)]
+    knots = [(0,0) for i in range(n)]
     for op in data.splitlines():
       d, o = op.split(' ')
       for i in range(int(o)):
